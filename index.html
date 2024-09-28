@@ -8,20 +8,20 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
+            background-color: #eaeef2;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            background: linear-gradient(135deg, #3b5998, #8b9dc3);
             color: white;
             padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             z-index: 1000;
         }
 
@@ -38,10 +38,13 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease, transform 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
 
         nav a:hover {
             color: #f39c12;
+            background-color: rgba(243, 156, 18, 0.1);
             transform: scale(1.05);
         }
 
@@ -95,7 +98,7 @@
         }
 
         footer {
-            background-color: #2c3e50;
+            background-color: #34495e;
             color: #ecf0f1;
             text-align: center;
             padding: 15px;
@@ -110,25 +113,37 @@
             margin-bottom: 40px;
         }
 
-        .faq h3 {
+        .faq h2 {
+            text-align: center;
+            color: #3b5998;
+        }
+
+        .faq-item {
+            margin: 15px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        .faq-item h3 {
             cursor: pointer;
-            margin: 10px 0;
-            padding: 10px;
+            margin: 0;
+            padding: 15px;
             background-color: #3498db;
             color: white;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: background-color 0.3s, transform 0.3s;
         }
 
-        .faq h3:hover {
+        .faq-item h3:hover {
             background-color: #2980b9;
             transform: scale(1.02);
         }
 
         .faq-content {
             display: none;
-            margin-top: 10px;
-            padding: 10px;
+            margin: 10px;
+            padding: 15px;
             border-left: 4px solid #3498db;
             background-color: #ecf0f1;
             border-radius: 5px;
@@ -185,31 +200,38 @@
         <!-- Q&A Section -->
         <div class="faq" id="faq">
             <h2>Soalan & Jawapan (Q&A)</h2>
-            <h3 onclick="toggleFAQ(1)">Soalan 1: Apakah fungsi utama mikroskop?</h3>
-            <div class="faq-content" id="faq1">
-                <p>Fungsi utama mikroskop adalah untuk memperbesar objek kecil agar dapat dilihat dengan jelas, membantu dalam pengamatan struktur dan butiran yang tidak dapat dilihat dengan mata kasar.</p>
+
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(1)">Soalan 1: Apakah fungsi utama mikroskop?</h3>
+                <div class="faq-content" id="faq1">
+                    <p>Fungsi utama mikroskop adalah untuk memperbesar objek kecil agar dapat dilihat dengan jelas, membantu dalam pengamatan struktur dan butiran yang tidak dapat dilihat dengan mata kasar.</p>
+                </div>
             </div>
 
-            <h3 onclick="toggleFAQ(2)">Soalan 2: Bagaimana cara mengendalikan mikroskop dengan betul?</h3>
-            <div class="faq-content" id="faq2">
-                <p>Untuk mengendalikan mikroskop dengan betul, pastikan ia diletakkan di permukaan rata, pilih lensa objektif yang sesuai, letakkan sampel dengan stabil, gunakan pengawal fokus kasar untuk mendapatkan fokus kasar, kemudian gunakan pengawal fokus halus untuk penyesuaian akhir. Sesuaikan pencahayaan untuk meningkatkan kualiti gambar.</p>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(2)">Soalan 2: Bagaimana cara mengendalikan mikroskop dengan betul?</h3>
+                <div class="faq-content" id="faq2">
+                    <p>Untuk mengendalikan mikroskop dengan betul, pastikan ia diletakkan di permukaan rata, pilih lensa objektif yang sesuai, letakkan sampel dengan stabil, gunakan pengawal fokus kasar untuk mendapatkan fokus kasar, kemudian gunakan pengawal fokus halus untuk penyesuaian akhir. Sesuaikan pencahayaan untuk meningkatkan kualiti gambar.</p>
+                </div>
             </div>
 
-            <h3 onclick="toggleFAQ(3)">Soalan 3: Apakah perbezaan antara mikroskop dan teleskop?</h3>
-            <div class="faq-content" id="faq3">
-                <p>Mikroskop digunakan untuk melihat objek kecil, sementara teleskop digunakan untuk melihat objek yang jauh. Mikroskop mempunyai magnifikasi yang lebih tinggi, manakala teleskop lebih fokus pada pembesaran objek yang jauh dan menangkap cahaya dari bintang atau planet.</p>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(3)">Soalan 3: Apakah perbezaan antara mikroskop dan teleskop?</h3>
+                <div class="faq-content" id="faq3">
+                    <p>Mikroskop digunakan untuk melihat objek kecil, sementara teleskop digunakan untuk melihat objek yang jauh. Mikroskop mempunyai magnifikasi yang lebih tinggi, manakala teleskop lebih fokus pada pembesaran objek yang jauh dan menangkap cahaya dari bintang atau planet.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <footer id="contact">
-        <p>&copy; 2024 Microscope Introduction Website | Hubungi kami di <a href="mailto:info@mikroskop.com" style="color: #f39c12; text-decoration: none;">info@mikroskop.com</a></p>
+        <p>&copy; 2024 Microscope Introduction Website | Hubungi kami di <a href="mailto:info@mikroskop.com" style="color: #f39c12;">info@mikroskop.com</a></p>
     </footer>
 
     <script>
         function toggleFAQ(index) {
             const content = document.getElementById(`faq${index}`);
-            content.classList.toggle("show");
+            content.classList.toggle('show');
         }
     </script>
 </body>
