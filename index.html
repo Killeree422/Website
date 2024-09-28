@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maklumat Tambahan tentang Mikroskop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f0f4f8;
             color: #333;
             margin: 0;
@@ -14,40 +15,76 @@
         }
 
         header {
-            background-color: #4a90e2;
+            background-color: #2c3e50;
             color: white;
             padding: 20px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f39c12;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
 
         .intro {
             text-align: center;
             background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .intro:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
         }
 
         .videos {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
+            gap: 30px;
+            justify-content: center;
         }
 
         .video-wrapper {
-            flex: 1 1 45%;
+            flex: 1 1 calc(50% - 40px);
+            max-width: 500px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
             background-color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-wrapper:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
         }
 
         iframe {
@@ -57,28 +94,40 @@
         }
 
         footer {
-            background-color: #4a90e2;
-            color: white;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .video-wrapper {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>This is a website for Microscope</h1>
+        <h1>Maklumat Tambahan tentang Mikroskop</h1>
     </header>
+
+    <nav>
+        <a href="#intro">Pengenalan</a>
+        <a href="#videos">Video</a>
+        <a href="#contact">Hubungi Kami</a>
+    </nav>
 
     <div class="container">
         <!-- Introduction Section -->
-        <div class="intro">
+        <div class="intro" id="intro">
             <h2>Pengenalan Mikroskop</h2>
             <p>Mikroskop ialah alat yang membolehkan kita meneroka butiran tersembunyi di sekeliling kita. Ia membolehkan kita melihat objek yang terlalu kecil untuk diperhatikan dengan mata kasar, seperti sel, bakteria, dan juga struktur tumbuhan serta mineral yang kompleks. Sejak dicipta, mikroskop telah menjadi alat penting dalam pelbagai bidang sains, seperti biologi, perubatan, dan sains bahan. Dengan membesarkan imej objek, mikroskop memberikan saintis dan penyelidik pemahaman yang lebih mendalam tentang komponen asas yang membentuk semua benda hidup dan bukan hidup, sekali gus membuka jalan kepada penemuan penting dalam bidang kesihatan, kajian alam sekitar, dan banyak lagi.</p>
         </div>
 
         <!-- Video Section -->
-        <div class="videos">
+        <div class="videos" id="videos">
             <div class="video-wrapper">
                 <!-- YouTube Video 1 -->
                 <iframe src="https://www.youtube.com/embed/SUo2fHZaZCU" allowfullscreen></iframe>
@@ -91,9 +140,8 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Microscope Introduction Website</p>
+    <footer id="contact">
+        <p>&copy; 2024 Microscope Introduction Website | Hubungi kami di <a href="mailto:info@mikroskop.com" style="color: #f39c12; text-decoration: none;">info@mikroskop.com</a></p>
     </footer>
 </body>
 </html>
-
